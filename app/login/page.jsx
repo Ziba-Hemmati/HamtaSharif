@@ -33,7 +33,7 @@ const Login = () => {
 
   const logOut = () => {
     googleLogout();
-    setProfile(null);
+    setProfile({ id: 0 });
   };
 
   return (
