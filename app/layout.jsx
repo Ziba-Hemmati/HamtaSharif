@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <GoogleOAuthProvider clientId="465490051014-b8s4rg323n1e569c5oqnictho64gqu34.apps.googleusercontent.com">
-        <body className={inter.className}>{children}</body>
+        <body>{children}</body>
       </GoogleOAuthProvider>
     </html>
   );
