@@ -6,7 +6,7 @@ import axios from "axios";
 const Login = () => {
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState([]);
-
+  console.log(profile);
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),
     onError: (error) => console.log("Login Failed:", error),
@@ -41,7 +41,7 @@ const Login = () => {
       <h2>React Google Login</h2>
       <br />
       <br />
-      {profile.length ? (
+      {profile.id ? (
         <div>
           <img src={profile.picture} alt="user image" />
           <h3>User Logged in</h3>
