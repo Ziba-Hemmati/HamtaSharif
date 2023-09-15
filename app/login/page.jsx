@@ -31,17 +31,17 @@ const Login = () => {
     }
   }, [user]);
 
-  // log out function to log the user out of google and set the profile array to null
   const logOut = () => {
     googleLogout();
     setProfile(null);
   };
+
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
       <h2>React Google Login</h2>
       <br />
       <br />
-      {profile ? (
+      {profile.length ? (
         <div>
           <img src={profile.picture} alt="user image" />
           <h3>User Logged in</h3>
