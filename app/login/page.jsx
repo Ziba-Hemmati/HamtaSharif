@@ -2,11 +2,12 @@
 import { useState, useEffect } from "react";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import Link from "next/link";
 
 const Login = () => {
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState([]);
-  console.log(profile);
+
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),
     onError: (error) => console.log("Login Failed:", error),
@@ -38,7 +39,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
-      <h2>React Google Login</h2>
+      <h2>Hamta Sharif Login</h2>
       <br />
       <br />
       {profile.id ? (
@@ -50,6 +51,11 @@ const Login = () => {
           <br />
           <br />
           <button onClick={logOut}>Log out</button>
+          <div>
+            <Link href={"/dashboard"}>
+              <button>Dashboard</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <button onClick={() => login()}>Sign in with Google 🚀 </button>
