@@ -1,5 +1,5 @@
-import Info from "../components/Info";
-import Board from "../components/Board";
+import Info from "../../components/Info";
+import Board from "../../components/Board";
 
 const Dashboard = () => {
   return (
