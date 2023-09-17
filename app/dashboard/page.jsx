@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [toggle, setToggle] = useState(false);
   const handleClick = useCallback(() => {
     setToggle((prev) => !prev);
-  }, [toggle]);
+  }, []);
 
   return (
     <div className="w-full min-h-screen flex flex-col justify-center lg:flex-row lg:justify-between items-center">
