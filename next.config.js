@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  experimentalFeatures: {
+    reactServerComponents: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
