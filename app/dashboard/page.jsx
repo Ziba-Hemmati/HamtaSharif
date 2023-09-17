@@ -10,7 +10,7 @@ const Dashboard = () => {
   }, [toggle]);
 
   return (
-    <div className="w-full min-h-screen flex justify-between items-center">
+    <div className="w-full min-h-screen flex flex-col justify-center lg:flex-row lg:justify-between items-center">
       <Info toggle={toggle} />
       <Board handleClick={handleClick} />
     </div>

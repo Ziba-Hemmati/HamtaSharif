@@ -22,7 +22,7 @@ function MeshComponent() {
 
 export default function Board({ handleClick }) {
   return (
-    <div className="h-screen w-[60%] cursor-pointer">
+    <div className="w-full lg:w-[60%] h-screen cursor-pointer mt-10 lg:mt-0">
       <Canvas onDoubleClick={handleClick}>
         <OrbitControls />
         <ambientLight />
