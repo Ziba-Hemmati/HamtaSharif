@@ -4,7 +4,7 @@ const processor = "Cortex M";
 
 const Info = ({ toggle }) => {
   return toggle ? (
-    <div className="transition-transform translate-y-10 lg:translate-y-0 lg:translate-x-14 duration-700 text-sm lg:text-base">
+    <div className="transition-transform translate-y-10 lg:translate-y-0 lg:translate-x-14 duration-700 text-sm lg:text-base mb-10 lg:mb-0">
       <div>
         deviceID : <span> {deviceID} </span>
       </div>
