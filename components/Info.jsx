@@ -2,9 +2,9 @@ const deviceID = "rasp-pi-pico";
 const firmwareVersion = "2.1.0";
 const processor = "Cortex M";
 
-const Info = () => {
-  return (
-    <div className="ml-14">
+const Info = ({ toggle }) => {
+  return toggle ? (
+    <div className="ml-14 transition-all duration-700">
       <div>
         deviceID : <span> {deviceID} </span>
       </div>
@@ -14,6 +14,10 @@ const Info = () => {
       <div>
         processor : <span> {processor} </span>
       </div>
+    </div>
+  ) : (
+    <div className="ml-14">
+      Double click board to see the information
     </div>
   );
 };

@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -11,9 +9,9 @@ function MeshComponent() {
   const mesh = useRef(<Mesh />);
   const gltf = useLoader(GLTFLoader, fileUrl);
   useFrame(() => {
-    mesh.current.scale.z = 0.04;
-    mesh.current.scale.x = 0.04;
-    mesh.current.scale.y = 0.04;
+    mesh.current.scale.z = 0.03;
+    mesh.current.scale.x = 0.03;
+    mesh.current.scale.y = 0.03;
   });
   return (
     <mesh ref={mesh}>
@@ -22,10 +20,10 @@ function MeshComponent() {
   );
 }
 
-export default function Board() {
+export default function Board({ handleClick }) {
   return (
     <div className="h-screen w-[60%] cursor-pointer">
-      <Canvas>
+      <Canvas onDoubleClick={handleClick}>
         <OrbitControls />
         <ambientLight />
         <pointLight position={[10, 10, 10]} />

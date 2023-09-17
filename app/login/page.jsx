@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
-      <h2>Hamta Sharif Login</h2>
+      <h2 className="text-lg font-bold">Hamta Sharif Login</h2>
       <br />
       <br />
       {profile.id ? (
@@ -45,7 +45,12 @@ const Login = () => {
           {router.push("/dashboard")}
         </>
       ) : (
-        <button onClick={() => login()}>Sign in with Google 🚀</button>
+        <button
+          onClick={() => login()}
+          className="border border-blue-300 rounded-md p-2 hover:text-gray-400 hover:bg-gray-950 transition-colors duration-300"
+        >
+          Sign in with Google
+        </button>
       )}
     </div>
   );
