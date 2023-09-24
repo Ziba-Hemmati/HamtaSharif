@@ -1,9 +1,5 @@
-"use client";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { GoogleOAuthProvider } from "@react-oauth/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import ClientRootLayout from "./client-layout";
 
 export const metadata = {
   title: "Pre-project",
@@ -11,13 +7,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <GoogleOAuthProvider clientId="465490051014-b8s4rg323n1e569c5oqnictho64gqu34.apps.googleusercontent.com">
-          {children}
-        </GoogleOAuthProvider>
-      </body>
-    </html>
-  );
+  return <ClientRootLayout>{children} </ClientRootLayout>;
 }
