@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <ClientRootLayout>{children} </ClientRootLayout>;
+  return <ClientRootLayout>{children}</ClientRootLayout>;
 }
